@@ -9,6 +9,12 @@ So, do you want to learn how to set up the project to use image tracking for AR?
 As with other posts about AR (Face Tracking and Building AR Game), we have to start with the Package Manager and its packages for AR.
 You will have to install the following packages: AR Foundation, ARCore XR Plugin (for Android support), and ARKit XR Plugin (for iOS support).
 
+Requirements: 
+    Unity 2019.1
+    AR Foundation: 2.1.4
+    ARCore XR Plugin: 2.2.0
+    ARKit XR Plugin 2.1.1
+
 ![Screenshot](https://github.com/codemaker2015/ARFoundation-Image-Database-Demo/blob/master/Screenshots/Screenshot1.png "Screenshot")
 ##### AR packages in Package Manager.
 
@@ -64,6 +70,10 @@ Of course, now we also have to assign the references in it.
 ##### AR Tracked Image Manager Component
 One reference is for our ReferenceImageLibrary and the second one if for our prefab which will be displayed on the marker. Be aware that 1 unit in Unity space is 1 meter in the real world!
 You can also specify how many images you want to track. The maximum number may vary between different devices so I would recommend checking it (read more).
+
+### Image Detection
+
+Attach DetectImages.cs script to ARFoundationSessionStack prefab. It will help you to dynamically load database from firebase and detect those images at runtime
 
 ### Build settings 
 
